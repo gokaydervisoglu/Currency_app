@@ -1,6 +1,6 @@
 ﻿namespace Currency_app
 {
-    partial class Form1
+    partial class UserPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPanel));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.try_money = new System.Windows.Forms.Label();
+            this.eur_money = new System.Windows.Forms.Label();
+            this.usd_money = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.username_lbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.usd_combo = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.eur_combo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,17 +57,31 @@
             this.total_lbl = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_bank = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.try_money);
+            this.groupBox1.Controls.Add(this.eur_money);
+            this.groupBox1.Controls.Add(this.usd_money);
+            this.groupBox1.Controls.Add(this.pictureBox6);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.username_lbl);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.pictureBox5);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.8F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -70,15 +91,92 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // try_money
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 13F);
-            this.label1.Location = new System.Drawing.Point(41, 161);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User Name";
+            this.try_money.AutoSize = true;
+            this.try_money.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.try_money.ForeColor = System.Drawing.SystemColors.Window;
+            this.try_money.Location = new System.Drawing.Point(131, 290);
+            this.try_money.Name = "try_money";
+            this.try_money.Size = new System.Drawing.Size(19, 23);
+            this.try_money.TabIndex = 26;
+            this.try_money.Text = "0";
+            // 
+            // eur_money
+            // 
+            this.eur_money.AutoSize = true;
+            this.eur_money.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eur_money.ForeColor = System.Drawing.SystemColors.Window;
+            this.eur_money.Location = new System.Drawing.Point(131, 256);
+            this.eur_money.Name = "eur_money";
+            this.eur_money.Size = new System.Drawing.Size(19, 23);
+            this.eur_money.TabIndex = 25;
+            this.eur_money.Text = "0";
+            // 
+            // usd_money
+            // 
+            this.usd_money.AutoSize = true;
+            this.usd_money.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usd_money.ForeColor = System.Drawing.SystemColors.Window;
+            this.usd_money.Location = new System.Drawing.Point(131, 223);
+            this.usd_money.Name = "usd_money";
+            this.usd_money.Size = new System.Drawing.Size(19, 23);
+            this.usd_money.TabIndex = 19;
+            this.usd_money.Text = "0";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Currency_app.Properties.Resources.turkey_555560;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 290);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(48, 23);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 24;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(78, 290);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 23);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "TRY:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Currency_app.Properties.Resources.european_union_5372767;
+            this.pictureBox4.Location = new System.Drawing.Point(18, 256);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(48, 23);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 22;
+            this.pictureBox4.TabStop = false;
+            // 
+            // username_lbl
+            // 
+            this.username_lbl.AutoSize = true;
+            this.username_lbl.Font = new System.Drawing.Font("Microsoft YaHei Light", 13F);
+            this.username_lbl.Location = new System.Drawing.Point(70, 166);
+            this.username_lbl.Name = "username_lbl";
+            this.username_lbl.Size = new System.Drawing.Size(57, 30);
+            this.username_lbl.TabIndex = 1;
+            this.username_lbl.Text = "User";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(78, 256);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "EUR:";
             // 
             // pictureBox1
             // 
@@ -89,6 +187,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Currency_app.Properties.Resources.united_states_3373318;
+            this.pictureBox5.Location = new System.Drawing.Point(20, 223);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(44, 23);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 20;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(78, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 23);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "USD:";
             // 
             // usd_combo
             // 
@@ -103,26 +223,6 @@
             this.usd_combo.TabIndex = 1;
             this.usd_combo.Text = "USD/TRY";
             this.usd_combo.Click += new System.EventHandler(this.usd_combo_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Currency_app.Properties.Resources.united_states_3373318;
-            this.pictureBox2.Location = new System.Drawing.Point(228, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 23);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Currency_app.Properties.Resources.european_union_5372767;
-            this.pictureBox3.Location = new System.Drawing.Point(226, 72);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 23);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // eur_combo
             // 
@@ -290,7 +390,27 @@
             this.btn_bank.UseVisualStyleBackColor = true;
             this.btn_bank.Click += new System.EventHandler(this.btn_bank_Click);
             // 
-            // Form1
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Currency_app.Properties.Resources.european_union_5372767;
+            this.pictureBox3.Location = new System.Drawing.Point(226, 72);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 23);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Currency_app.Properties.Resources.united_states_3373318;
+            this.pictureBox2.Location = new System.Drawing.Point(228, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // UserPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -318,15 +438,19 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "UserPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Currency";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserPanel_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,7 +460,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label username_lbl;
         private System.Windows.Forms.Label usd_combo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -355,6 +479,15 @@
         private System.Windows.Forms.TextBox total_lbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_bank;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label try_money;
+        private System.Windows.Forms.Label eur_money;
+        private System.Windows.Forms.Label usd_money;
     }
 }
 

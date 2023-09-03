@@ -81,16 +81,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterPanel.Designer.cs">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel.Designer.cs">
+      <DependentUpon>UserPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterPanel.resx">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel.resx">
+      <DependentUpon>UserPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\united-states_3373318.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turkey_555560.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stats_858715.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

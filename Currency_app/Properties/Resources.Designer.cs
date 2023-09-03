@@ -73,6 +73,26 @@ namespace Currency_app.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stats_858715 {
+            get {
+                object obj = ResourceManager.GetObject("stats_858715", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap turkey_555560 {
+            get {
+                object obj = ResourceManager.GetObject("turkey_555560", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap united_states_3373318 {
             get {
                 object obj = ResourceManager.GetObject("united-states_3373318", resourceCulture);
