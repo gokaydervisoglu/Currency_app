@@ -34,13 +34,13 @@
             this.eur_money = new System.Windows.Forms.Label();
             this.usd_money = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.try_lbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.username_lbl = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.eur_lbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.usd_lbl = new System.Windows.Forms.Label();
             this.usd_combo = new System.Windows.Forms.Label();
             this.eur_combo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,13 +75,13 @@
             this.groupBox1.Controls.Add(this.eur_money);
             this.groupBox1.Controls.Add(this.usd_money);
             this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.try_lbl);
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.username_lbl);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.eur_lbl);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.pictureBox5);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.usd_lbl);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.8F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -134,17 +134,18 @@
             this.pictureBox6.TabIndex = 24;
             this.pictureBox6.TabStop = false;
             // 
-            // label9
+            // try_lbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Window;
-            this.label9.Location = new System.Drawing.Point(78, 290);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 23);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "TRY:";
+            this.try_lbl.AutoSize = true;
+            this.try_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.try_lbl.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.try_lbl.ForeColor = System.Drawing.SystemColors.Window;
+            this.try_lbl.Location = new System.Drawing.Point(78, 290);
+            this.try_lbl.Name = "try_lbl";
+            this.try_lbl.Size = new System.Drawing.Size(43, 23);
+            this.try_lbl.TabIndex = 23;
+            this.try_lbl.Text = "TRY:";
+            this.try_lbl.Click += new System.EventHandler(this.try_lbl_Click);
             // 
             // pictureBox4
             // 
@@ -166,17 +167,18 @@
             this.username_lbl.TabIndex = 1;
             this.username_lbl.Text = "User";
             // 
-            // label2
+            // eur_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(78, 256);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 23);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "EUR:";
+            this.eur_lbl.AutoSize = true;
+            this.eur_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eur_lbl.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eur_lbl.ForeColor = System.Drawing.SystemColors.Window;
+            this.eur_lbl.Location = new System.Drawing.Point(78, 256);
+            this.eur_lbl.Name = "eur_lbl";
+            this.eur_lbl.Size = new System.Drawing.Size(45, 23);
+            this.eur_lbl.TabIndex = 21;
+            this.eur_lbl.Text = "EUR:";
+            this.eur_lbl.Click += new System.EventHandler(this.eur_lbl_Click);
             // 
             // pictureBox1
             // 
@@ -198,17 +200,18 @@
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
-            // label3
+            // usd_lbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(78, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 23);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "USD:";
+            this.usd_lbl.AutoSize = true;
+            this.usd_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usd_lbl.Font = new System.Drawing.Font("Microsoft YaHei Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usd_lbl.ForeColor = System.Drawing.SystemColors.Window;
+            this.usd_lbl.Location = new System.Drawing.Point(78, 223);
+            this.usd_lbl.Name = "usd_lbl";
+            this.usd_lbl.Size = new System.Drawing.Size(47, 23);
+            this.usd_lbl.TabIndex = 19;
+            this.usd_lbl.Text = "USD:";
+            this.usd_lbl.Click += new System.EventHandler(this.usd_lbl_Click);
             // 
             // usd_combo
             // 
@@ -480,11 +483,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_bank;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label eur_lbl;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label usd_lbl;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label try_lbl;
         private System.Windows.Forms.Label try_money;
         private System.Windows.Forms.Label eur_money;
         private System.Windows.Forms.Label usd_money;

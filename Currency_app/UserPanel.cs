@@ -58,15 +58,12 @@ namespace Currency_app
 
             try
             {
-                if (temp > usd || temp > tr || temp > eur)
-                {
-                    MessageBox.Show("Not that much money!");
-                }
-                else if (amount_lbl.Text == "0")
+                
+                if (amount_lbl.Text == "0")
                 {
                     MessageBox.Show("Please enter amount to currency transfer");
                 }
-                else if (combo == true && key == true)
+                else if (combo == true && key == true && temp <= tr)
                 {
                     //dolar buy
                     using (SqlConnection sql = new SqlConnection(sql_s))
@@ -86,7 +83,7 @@ namespace Currency_app
 
                     MessageBox.Show("Process completed");
                 }
-                else if (combo == false && key == true)
+                else if (combo == false && key == true && temp <= usd)
                 {
                     //dolar sell
                     using (SqlConnection sql = new SqlConnection(sql_s))
@@ -106,7 +103,7 @@ namespace Currency_app
                  
                     MessageBox.Show("Process completed");
                 }
-                else if (combo == true && key == false)
+                else if (combo == true && key == false && temp <= tr)
                 {
                     //eur buy
                     using (SqlConnection sql = new SqlConnection(sql_s))
@@ -125,7 +122,7 @@ namespace Currency_app
                     }
                     MessageBox.Show("Process completed");
                 }
-                else if (combo == false && key == false)
+                else if (combo == false && key == false && temp <= eur)
                 {
                     //eur sell
                     using (SqlConnection sql = new SqlConnection(sql_s))
@@ -143,6 +140,10 @@ namespace Currency_app
                         cmd.ExecuteNonQuery();
                     }
                     MessageBox.Show("Process completed");
+                }
+                else
+                {
+                    MessageBox.Show("Process Not completed, Try Again!");
                 }
                
             }
@@ -278,6 +279,21 @@ namespace Currency_app
                 }
 
             }
+        }
+
+        private void usd_lbl_Click(object sender, EventArgs e)
+        {
+            amount_lbl.Text = usd_money.Text;
+        }
+
+        private void eur_lbl_Click(object sender, EventArgs e)
+        {
+            amount_lbl.Text = eur_money.Text;
+        }
+
+        private void try_lbl_Click(object sender, EventArgs e)
+        {
+            amount_lbl.Text = try_money.Text;
         }
     }
 }
