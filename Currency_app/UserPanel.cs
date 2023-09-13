@@ -6,6 +6,7 @@ using System.Xml;
 using System.Diagnostics.Eventing.Reader;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 namespace Currency_app
 {
@@ -13,6 +14,7 @@ namespace Currency_app
     {
         bool key;
         bool combo;
+        bool edit = true;
         public string username;
         private decimal newusd;
         private decimal newtry;
@@ -294,6 +296,50 @@ namespace Currency_app
         private void try_lbl_Click(object sender, EventArgs e)
         {
             amount_lbl.Text = try_money.Text;
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+
+            if(edit == true)
+            {
+                usd_money.ReadOnly = false;
+                try_money.ReadOnly = false;
+                eur_money.ReadOnly = false;
+
+                usd_money.ForeColor = Color.Aqua;
+                try_money.ForeColor = Color.Aqua;
+                eur_money.ForeColor = Color.Aqua;
+
+                btn_edit.Text = "Confirm";
+                edit= false;
+
+            }
+            else
+            {
+                using (SqlConnection sql = new SqlConnection(sql_s))
+                {
+                    sql.Open();
+
+                    SqlCommand cmd = new SqlCommand("Update Tbl_Users Set USD=@p1,EUR=@p2,TRY=@p3 where Username=@p4", sql);
+
+                    cmd.Parameters.AddWithValue("@p1", usd_money.Text);
+                    cmd.Parameters.AddWithValue("@p2", eur_money.Text);
+                    cmd.Parameters.AddWithValue("@p3", try_money.Text);
+                    cmd.Parameters.AddWithValue("@p4", username);
+
+                    cmd.ExecuteNonQuery();
+                    edit = true;
+                }
+                usd_money.ReadOnly = true;
+                try_money.ReadOnly = true;
+                eur_money.ReadOnly = true;
+
+                usd_money.ForeColor = Color.White;
+                try_money.ForeColor = Color.White;
+                eur_money.ForeColor = Color.White;
+                btn_edit.Text = "Edit";
+            }
         }
     }
 }
